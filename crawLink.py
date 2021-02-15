@@ -24,7 +24,6 @@ def crawLink(website):
     justLink = allcontent.find_all('a', href=True)
     for link in justLink:
         scrapLink= link['href']
-        print(scrapLink)
         if 'https://' not in scrapLink:
             scrapLink= scrapLink.split("?")
             with open('justLink.txt','r+', encoding="utf-8") as filetxt:
