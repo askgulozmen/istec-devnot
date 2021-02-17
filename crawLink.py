@@ -33,6 +33,6 @@ def crawLink(website):
                         filetxt.seek(0)
                         filetxt.write(f'{websiteSplit[0]}//{websiteSplit[2]}/{scrapLink[0]}\n'+contentBack+"\n")
 
-with open('urlWordlist.txt', ('r+'), encoding='utf-8') as urL:
+with open('urlWordlist.txt', 'r+', encoding='utf-8') as urL:
     for site in urL:
         crawLink(site)
